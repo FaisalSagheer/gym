@@ -1,11 +1,10 @@
 "use client";
 
-import { Articles } from "@/app/components/Articles";
-import { Footer } from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 import ReactLenis from "@studio-freight/react-lenis";
 import { useEffect, useRef } from "react";
 import { BlogSection } from "./Blog";
+import Footer from "@/app/components/Footer";
+import HeaderCommon from "@/app/components/HeaderCommon";
 
 const BlogsPage = () => {
   const observerRef = useRef(null);
@@ -47,13 +46,13 @@ const BlogsPage = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <HeaderCommon />
       <ReactLenis root>
         <div className="pt-34 pb-16 fade-in-on-scroll">
           <div className="container mx-auto px-6 -mb-16">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
-                Blogs & Articles
+                Blogs
               </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Welcome to Joel Smith blogs & articles, where writing meets
@@ -70,7 +69,6 @@ const BlogsPage = () => {
             showViewAll={false}
             className="bg-white"
           />
-          <Articles />
         </div>
       </ReactLenis>
       <Footer />
